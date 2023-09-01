@@ -4,10 +4,10 @@ import { Textarea } from "../../components/Textarea"
 import { NoteItem } from "../../components/NoteItem"; 
 import { Section } from "../../components/Section"
 import { Button } from "../../components/Button"
+import { ButtonText } from "../../components/ButtonText"
 
 import { Container, Form } from "./styles";
 
-import { Link } from "react-router-dom"
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -47,6 +47,10 @@ export function New(){
         setTags(prevState => prevState.filter(tag => tag !== deleted));
     }
 
+    function handleBack(){
+        navigate(-1)
+      }
+
     async function handleNewNote(){
         if(!title){
             return alert("Digite o título da nota.");
@@ -61,7 +65,7 @@ export function New(){
         await api.post("/notes" , {title, description, tags, links});
 
         alert("Nota criada com sucesso!")
-        navigate("/")
+        navigate(-1)
     }
 
     return(
@@ -72,7 +76,7 @@ export function New(){
                 <Form>
                     <header>
                         <h1>Criar nota</h1>
-                        <Link to="/">Voltar</Link>
+                        <ButtonText title="Voltar" onClick={handleBack}/>
                     </header>
 
                     <Input placeholder="Título" onChange={e => setTitle(e.target.value)}/>
