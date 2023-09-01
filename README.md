@@ -44,7 +44,7 @@ Contribuições são bem-vindas! Se você encontrou problemas, tem sugestões de
 
 ## Contato
 
-Se tiver alguma pergunta ou desejar entrar em contato, você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/seu-nome/) ou por e-mail em [seu.email@example.com](mailto:seu.email@example.com).
+Se tiver alguma pergunta ou desejar entrar em contato, você pode me encontrar no [LinkedIn](www.linkedin.com/in/joão-marcosom).
 
 ---
 
